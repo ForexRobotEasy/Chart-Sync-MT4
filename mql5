@@ -1,0 +1,95 @@
+mql5
+//+------------------------------------------------------------------+
+//|                                        Chart Sync MT4           |
+//|                                       forexroboteasy.com        |
+//|                                       Forex Robot Easy Team     |
+//+------------------------------------------------------------------+
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//|          Terms of Reference for Writing Code for Product          |
+//|          Chart Sync MT4                                           |
+//|                                                                  |
+//|  1. Develop code for the Chart Sync MT4 indicator for             |
+//|     MetaTrader 5 trading terminals.                               |
+//|  2. Enable synchronized symbols and objects across unlimited      |
+//|     charts.                                                       |
+//|  3. Provide advanced settings for clear and professional forex    |
+//|     analysis.                                                     |
+//|  4. Allow traders to choose to sync specific timeframe            |
+//|     trendlines on desired charts.                                 |
+//|  5. Eliminate clutter by excluding irrelevant trendlines on       |
+//|     higher timeframe charts.                                      |
+//|  6. Differentiate Chart Sync MT4 from other MT4 tools through     |
+//|     its unique features.                                          |
+//|  7. Implement object synchronization capability for drawing       |
+//|     trendlines, lines, Fibonacci, etc.                            |
+//|  8. Develop necessary trading functions required for the          |
+//|     indicator's functionality.                                    |
+//|  9. Ensure the code meets all specified requirements and          |
+//|     performs as expected.                                         |
+//| 10. The technical specification should focus solely on the        |
+//|     required trading functions.                                   |
+//| 11. The terms of reference should not exceed 1500-2000            |
+//|     characters.                                                   |
+//|                                                                  |
+//+------------------------------------------------------------------+
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//|          Chart Sync MT4 Indicator Code                            |
+//|                                                                  |
+//+------------------------------------------------------------------+
+#property copyright 'forexroboteasy.com'
+#property link      'https://www.forexroboteasy.com'
+#property version   '1.0'
+#property strict
+
+//+------------------------------------------------------------------+
+//| Global Variables                                                  |
+//+------------------------------------------------------------------+
+string g_SyncedSymbol;   // Symbol selected by the trader for synchronization
+bool g_SyncAllCharts;    // Flag to indicate if all charts should be synchronized
+string g_SyncedTimeframe; // Timeframe selected by the trader for synchronization
+
+//+------------------------------------------------------------------+
+//| Custom Indicator Initialization Function                         |
+//+------------------------------------------------------------------+
+int OnInit()
+{
+    // Initialize global variables
+    g_SyncedSymbol = '';
+    g_SyncAllCharts = false;
+    g_SyncedTimeframe = '';
+
+    // TODO: Add initialization code here
+
+    return(INIT_SUCCEEDED);
+}
+
+//+------------------------------------------------------------------+
+//| Custom Indicator Deinitialization Function                       |
+//+------------------------------------------------------------------+
+void OnDeinit(const int reason)
+{
+    // TODO: Add deinitialization code here
+}
+
+//+------------------------------------------------------------------+
+//| Custom Indicator Calculation Function                             |
+//+------------------------------------------------------------------+
+int OnCalculate(const int rates_total,
+                const int prev_calculated,
+                const datetime &time[],
+                const double &open[],
+                const double &high[],
+                const double &low[],
+                const double &close[],
+                const long &tick_volume[],
+                const long &volume[],
+                const int &spread[])
+{
+    // TODO: Add calculation code here
+
+    return(rates_total);
+}
